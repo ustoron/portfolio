@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Rock band</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-3.1.1.js"></script>
+    <script src="js/Mottie-tablesorter-08bf513/js/jquery.tablesorter.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/tablesorter.js"></script>
+    <script src="js/sorttable.js"></script>
+    <script>
+        sorttable.sort_alpha = function (a, b) {
+            return a[0].localeCompare(b[0]);
+        }
+    </script>
+    
+</head>
+
+<body>
+    <div class="fixBox">
+        <image src="images/fix_image.jpg" class="fixedImage"></image>
+    </div>
+    <div class="firstBox">
+        <h1 class="nameBand">AURUM</h1>
+        <h3 class="describtionBand">DIVE INTO OUR MUSIC</h3> </div>
+    <div class="secondBox">
+        <h2>WHO WE ARE?</h2>
+        <p class="infoBand">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas in corporis ratione commodi maiores, quod laborum velit voluptate. Qui, quisquam quo similique, necessitatibus aliquam iusto ducimus nemo ipsam iste iure. lorem</p>
+        <p class="infoBand1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas in corporis ratione commodi maiores, quod laborum velit voluptate. Qui, quisquam quo similique, necessitatibus aliquam iusto ducimus nemo ipsam iste iure. lorem</p>
+        <image src="images/wbBand.jpg" class="wbBand"></image> <a href="info1.html">Read More Here</a> </div>
+    <div class="thirdBox">
+        <h2>MEET US</h2>
+        <div class="musician">
+            <image src="images/frontman.png" class="musician"></image>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi magni explicabo nobis iure voluptas esse corporis impedit et odit asperiores ullam in, voluptatibus dolorum tempora hic error fuga ducimus voluptate!</p> <a href="info1.html">Read more</a> </div>
+        <div class="musician">
+            <image src="images/musician1.png" class="musician"></image>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi magni explicabo nobis iure voluptas esse corporis impedit et odit asperiores ullam in, voluptatibus dolorum tempora hic error fuga ducimus voluptate!</p> <a href="info1.html">Read more</a> </div>
+        <div class="musician">
+            <image src="images/musician2.png" class="musician"></image>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi magni explicabo nobis iure voluptas esse corporis impedit et odit asperiores ullam in, voluptatibus dolorum tempora hic error fuga ducimus voluptate!</p> <a href="info1.html">Read more</a> </div>
+        <div class="musician">
+            <image src="images/musician3.png" class="musician"></image>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi magni explicabo nobis iure voluptas esse corporis impedit et odit asperiores ullam in, voluptatibus dolorum tempora hic error fuga ducimus voluptate!</p> <a href="info1.html">Read more</a> </div>
+    </div>
+    <div class="forthBox">
+        <h2>Nearest concerts</h2>
+        
+        
+        <table class="concertTable sortable" id="insured_list">
+<!--
+           <div id="pager" class="pager">
+            <form> <img src="images/first.png" class="first" /> <img src="images/prev.png" class="prev" />
+                <input type="text" class="pagedisplay" /> <img src="images/next.png" class="next" /> <img src="images/last.png" class="last" />
+                <select class="pagesize">
+                    <option value="">>LIMIT</option>
+                    <option value="2">2 per page</option>
+                    <option value="5">5 per page</option>
+                    <option value="10">10 per page</option>
+                </select>
+            </form>
+        </div>
+-->
+            <thead>
+                <tr>
+                    <td class="firstColumn">Place\Event</td>
+                    <td class="secondColumn">Date</td>
+                </tr>
+            </thead>
+            <tbody id="superTable"> </tbody>
+        </table>
+        
+        
+        
+        
+    </div>
+</body>
+
+</html>

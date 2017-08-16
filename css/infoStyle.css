@@ -1,0 +1,74 @@
+.musicianInfo{
+    border-radius: 50%;
+    height: 450px;
+    width: 450px;
+}
+
+.infoFirst{
+   height: 600px;
+}
+
+.infoSecond{
+    background-color:#1d2b34;
+    color: #fdf5f2;
+    height: 600px;
+    width: 100%;
+    z-index: 10;
+    position: absolute;
+    margin:1600px 10px 100px 20px;
+    font-family: fantasy;
+    font-weight: bolder;
+    padding-right:20px;
+}
+
+.infoThird{
+     background-color: #1d2b34;
+    color: #fdf5f2;
+    height: 600px;
+    width: 100%;
+    z-index: 10;
+    position: absolute;
+    margin:2400px 10px 100px 20px;
+    font-family: fantasy;
+    font-weight: bolder;
+    padding-right:20px;
+}
+
+.infoForth{
+    background-color:#1d2b34;
+    color: #fdf5f2;
+    height: 6xs00px;
+    width: 100%;
+    z-index: 10;
+    position: absolute;
+    margin:3200px 10px 100px 20px;
+    font-family: fantasy;
+    font-weight: bolder;
+    padding-right:20px;
+}
+
+/*
+.infoSecond .infoBand,.infoForth .infoBand{
+    float: none;
+}
+*/
+
+.infoSecond .musicianInfo,.infoForth .musicianInfo{
+    float: left;
+    margin: 55px;
+}
+
+.infoFirst h2,  .infoThird h2 {
+   margin-left: 25%;   
+}
+
+.infoSecond h2,.infoForth h2{
+   margin-left: 50%;
+}
+
+.infoSecond a,.infoForth a{
+    margin-left: 60%; 
+    padding-bottom: -5000000px;
+}
+
+

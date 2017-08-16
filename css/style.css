@@ -1,0 +1,177 @@
+/*
+body{
+    background-image: url(background.jped.jpg) 100% 100% ;
+    background-size: contain;
+    margin: 0;
+}
+
+.nameBand{
+    text-align: center;
+    color: aliceblue;
+}
+
+.describtionBand{
+    text-align: center;
+    color: aliceblue;
+}*/
+
+body{
+    margin: 0;
+}
+
+.fixBox{
+    padding: 0;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+}
+
+.fixedImage{
+    height: 100%;
+    width: 100%;
+}
+
+.firstBox{
+    z-index: 10;
+    color: black;
+    position: absolute;
+    text-align: center;
+    font-family:fantasy;
+    font-size: 25px;
+    padding-top: 20%;
+    left: 36.5%;
+}
+
+.secondBox{
+    background-color:#1d2b34;
+    color: #fdf5f2;
+    height: 600px;
+    width: 100%;
+    z-index: 10;
+    position: absolute;
+    margin:790px 10px 100px 20px;
+    font-family: fantasy;
+    font-weight: bolder;
+    padding-right:20px;
+    
+}
+
+.thirdBox{
+    background-color: #1d2b34;
+    color: #fdf5f2;
+    height: 700px;
+    width: 100%;
+    z-index: 10;
+    position: absolute;
+    margin:1600px 10px 100px 20px;
+    font-family: fantasy;
+    font-weight: bolder;
+    padding-right:20px;
+    
+}
+
+.forthBox{
+    background-color: #1d2b34;
+    color: #fdf5f2;
+    height: 700px;
+    width: 100%;
+    z-index: 10;
+    position: absolute;
+    margin:2600px 10px 100px 20px;
+    font-family: fantasy;
+    font-weight: bolder;
+    padding-right:20px;
+    
+}
+
+.musician{
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    margin: 20px;
+    float: left;
+    text-align: center;
+}
+
+.secondBox h2, .thirdBox h2 , .forthBox h2{
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+.secondBox a{
+    padding-top: 20px;
+    margin-left: -830px;
+    color: #fdf5f2;
+}
+
+.thirdBox a{
+    
+    color: #fdf5f2;
+}
+
+.infoBand{
+    width: 45%;
+    padding-top: 40px;
+    font-family:fantasy;
+    font-weight: 400;
+    padding-right: 60px;
+    padding-left: 30px;
+    float: left;
+}
+
+.infoBand1{
+    width: 45%;
+    padding-top: 10px;
+    font-family:fantasy;
+    font-weight: 400;
+    padding-right: 60px;
+    padding-left: 30px;
+    float: left;
+}
+
+
+
+.wbBand{
+    z-index: 15;
+    height: 400px;
+    width: 200;
+    margin-top: -55px;
+    
+}
+
+.concertTable{
+    height: 500px;
+    width: 80%;
+    margin-left: 80px;
+    background-color: #fdf5f2;
+    border: black 5px solid;
+    color: black;
+    font-size: 20px;
+}
+
+.concertTable th , .concertTable td{
+     border: black 3px solid;
+}
+
+.firstColumn{
+    width: 70%;
+    padding-left: 20px;
+    font-family: fantasy;
+}
+
+.concertTable thead{
+    text-align: center;
+    font-weight:bolder;
+    font-size: 30px;
+    line-height: 50px;
+}
+
+.secondColumn {
+    text-align: center;
+}
+
+
+
+          
+
