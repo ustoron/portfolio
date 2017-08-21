@@ -10,22 +10,13 @@ xmlhttp.onreadystatechange = function() {
 xmlhttp.open("GET", url, true);
 xmlhttp.send();
 
+var arrName = [];
 function myFunction(arr) {
     var out = "";
     for(var i = 0; i < arr.length; i++) {
+        arrName[i] = arr[i].name;
         out +='<tr><td class="firstColumn">'+ arr[i].name+ '</td><td class="secondColumn">'+ arr[i].date+'</td></tr>';
     }
     document.getElementById("superTable").innerHTML = out;
 }
-
-//$(document).ready(function () {
-//                $("#insured_list").tablesorter();
-//            });
-//
-//$(document).ready(function() { 
-//    $("table") 
-//    .tablesorter({widthFixed: true, widgets: ['zebra']}) 
-//    .tablesorterPager({container: $("#pager")}); 
-//}); 
-
 

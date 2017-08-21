@@ -1,11 +1,32 @@
 .musicianInfo{
     border-radius: 50%;
-    height: 450px;
-    width: 450px;
+    height: 400px;
+    width: 400px;
+}
+
+.firstBox1{
+    z-index: 10;
+    color: black;
+    position: absolute;
+    text-align: center;
+    font-family:fantasy;
+    font-size: 25px;
+    padding-top: 20%;
+    left: 38%;
 }
 
 .infoFirst{
    height: 600px;
+}
+
+.infoBand11{
+    width: 55%;
+    padding-top: 50px;
+    font-family:fantasy;
+    font-weight: 400;
+    padding-right: 60px;
+    padding-left: 30px;
+    float: left;
 }
 
 .infoSecond{
@@ -55,7 +76,7 @@
 
 .infoSecond .musicianInfo,.infoForth .musicianInfo{
     float: left;
-    margin: 55px;
+    margin: 40px;
 }
 
 .infoFirst h2,  .infoThird h2 {
@@ -67,8 +88,11 @@
 }
 
 .infoSecond a,.infoForth a{
-    margin-left: 60%; 
-    padding-bottom: -5000000px;
+    margin-left: 20%; 
+/*    padding-bottom: -5000000px;*/
+}
+.infoFirst a,  .infoThird a {
+   margin-left: 30%;   
 }
 
 

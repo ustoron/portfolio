@@ -5,10 +5,9 @@
     <meta charset="UTF-8">
     <title>Rock band</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <script src="js/jquery-3.1.1.js"></script>
-    <script src="js/Mottie-tablesorter-08bf513/js/jquery.tablesorter.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/tablesorter.js"></script>
     <script src="js/sorttable.js"></script>
     <script>
         sorttable.sort_alpha = function (a, b) {
@@ -29,7 +28,8 @@
         <h2>WHO WE ARE?</h2>
         <p class="infoBand">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas in corporis ratione commodi maiores, quod laborum velit voluptate. Qui, quisquam quo similique, necessitatibus aliquam iusto ducimus nemo ipsam iste iure. lorem</p>
         <p class="infoBand1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas in corporis ratione commodi maiores, quod laborum velit voluptate. Qui, quisquam quo similique, necessitatibus aliquam iusto ducimus nemo ipsam iste iure. lorem</p>
-        <image src="images/wbBand.jpg" class="wbBand"></image> <a href="info1.html">Read More Here</a> </div>
+        <div class="readMore"> <a href="info1.html">Read More Here</a> </div>
+        <image src="images/wbBand.jpg" class="wbBand"></image></div>
     <div class="thirdBox">
         <h2>MEET US</h2>
         <div class="musician">
@@ -47,35 +47,36 @@
     </div>
     <div class="forthBox">
         <h2>Nearest concerts</h2>
-        
-        
-        <table class="concertTable sortable" id="insured_list">
-<!--
-           <div id="pager" class="pager">
-            <form> <img src="images/first.png" class="first" /> <img src="images/prev.png" class="prev" />
-                <input type="text" class="pagedisplay" /> <img src="images/next.png" class="next" /> <img src="images/last.png" class="last" />
-                <select class="pagesize">
-                    <option value="">>LIMIT</option>
-                    <option value="2">2 per page</option>
-                    <option value="5">5 per page</option>
-                    <option value="10">10 per page</option>
-                </select>
-            </form>
-        </div>
--->
-            <thead>
+         <div class="container" style="margin-top:35px">
+             <h4>Select number of rows</h4>
+             <div class="form-group">
+                 <select name="state" id="maxRows" class="form-control" style="width:150px">
+                     <option value="100">Show all</option>
+                     <option value="3">3</option>
+                     <option value="5">5</option>
+                     <option value="10">10</option>
+                 </select>
+             </div>
+             <input type="text" id="myInput" placeholder="Search for names..">
+         </div>
+          <table class="concertTable sortable " id="myTable">
+           <thead>
                 <tr>
                     <td class="firstColumn">Place\Event</td>
                     <td class="secondColumn">Date</td>
                 </tr>
             </thead>
-            <tbody id="superTable"> </tbody>
+            <tbody id="superTable">  </tbody>
         </table>
-        
-        
-        
-        
-    </div>
+        <div class="pagination-container">
+            <nav>
+                <ul class="pagination"></ul>
+            </nav>
+        </div>
+  </div>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+  <script src="js/pagination.js"></script>
+  <script src="js/filtering.js"></script>
 </body>
 
 </html>
