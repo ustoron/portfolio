@@ -5,19 +5,12 @@
     <meta charset="UTF-8">
     <title>Rock band</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <script src="js/jquery-3.1.1.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/sorttable.js"></script>
-    <script>
-        sorttable.sort_alpha = function (a, b) {
-            return a[0].localeCompare(b[0]);
-        }
-    </script>
+    <script src="js/angular.min.js"></script>
     
 </head>
 
-<body>
+<body ng-app = "myApp" ng-controller = "myCtrl as my">
     <div class="fixBox">
         <image src="images/fix_image.jpg" class="fixedImage"></image>
     </div>
@@ -46,6 +39,7 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi magni explicabo nobis iure voluptas esse corporis impedit et odit asperiores ullam in, voluptatibus dolorum tempora hic error fuga ducimus voluptate!</p> <a href="info1.html">Read more</a> </div>
     </div>
     <div class="forthBox">
+<!--
         <h2>Nearest concerts</h2>
          <div class="container" style="margin-top:35px">
              <h4>Select number of rows</h4>
@@ -68,15 +62,78 @@
             </thead>
             <tbody id="superTable">  </tbody>
         </table>
-        <div class="pagination-container">
+        
+-->
+            <div class="container">
+    <h2>Concerts</h2>
+    <input type="button" ng-click="my.add = true" value="Add concert">
+    <input type="text" ng-model="my.filter" value="filtering"> </div>
+  <table class="table concertTable">
+    <thead>
+      <tr>
+        <th ng-click="my.sort='name'">Name</th>
+        <th ng-click="my.sort='date'">Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="concert in my.concerts | orderBy: my.sort | filter: my.filterConcert">
+      <td>{{concert.name}}</td>
+      <td>{{concert.date}}</td>
+      <td><input type="button" value="change" ng-click="my.changeConcerts(concert)"></td>
+      <td><input type="button" value="remove" ng-click="my.remove(concert)"></td>
+      </tr>
+    </tbody>
+  </table>
+
+    <div class="pagination-container">
             <nav>
                 <ul class="pagination"></ul>
             </nav>
         </div>
+        
+        <div class="container">
+  
+  <div ng-if="my.add">
+      <h2>Add Concert</h2>
+      <input type="text" ng-model="my.addConcert.name">
+      <input type="text" ng-model="my.addConcert.date">
+      <input type="button" ng-click="my.addToConcert()">
+  </div> 
+   
+   <div ng-if="my.change">
+       <h2>Change concert</h2>
+       <div>
+           <lable>
+               Name:
+               <input type="text" ng-model="my.changeConcert.name">
+           </lable>
+       </div>
+       <div>
+           <lable>
+               Date:
+               <input type="text" ng-model="my.changeConcert.date">
+           </lable>
+       </div>
+      
+       
+       <input type="button" value="change" ng-click="my.finishChange()">
+       
+   </div>
+    
+    {{my.name}}
+    {{my.date}}
+
+        
   </div>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
-  <script src="js/pagination.js"></script>
-  <script src="js/filtering.js"></script>
+    </div>
+  
+   
+   
+   <script src="js/main.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/my-ctrl.js"></script>
+    <script src="js/login-ctrl.js"></script>
+
 </body>
 
 </html>
